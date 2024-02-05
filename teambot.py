@@ -4,6 +4,7 @@ from discord.ext import commands
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents)
+# ボットのトークンを設定
 token = 'your_discord_bot_token'
 
 @bot.event
@@ -98,5 +99,5 @@ async def move_to_team1(ctx):
         elif member.id in team_2:
             await member.move_to(team2_channel)
 
-# ボットのトークンを設定
+
 bot.run(token)
